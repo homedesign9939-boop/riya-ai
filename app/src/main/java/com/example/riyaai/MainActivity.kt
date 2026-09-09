@@ -5,7 +5,6 @@ import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.riyaai.R
 
 class MainActivity : AppCompatActivity() {
     private var isRunning = false
