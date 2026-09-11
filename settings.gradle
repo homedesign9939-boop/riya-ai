@@ -12,5 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "RiyaAI"
+
+rootProject.name = "Riya AI"
 include ':app'
