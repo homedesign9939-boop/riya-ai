@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.riyaai">
 
+    <!-- Zaroori Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
 
     <application
-        android:allowBackup="false"
-        android:icon="@android:drawable/ic_menu_compass"
-        android:label="Riya AI"
-        android:roundIcon="@android:drawable/ic_menu_compass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
 
+        <!-- MainActivity (Launcher Activity) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,8 +26,10 @@
             </intent-filter>
         </activity>
 
+        <!-- Riya Foreground Service -->
         <service
             android:name=".RiyaForegroundService"
+            android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="microphone" />
 
